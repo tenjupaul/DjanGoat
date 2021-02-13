@@ -16,3 +16,14 @@ def simulate_simple_authentication(factory, client, email, password, path, add_m
     auth_token = auth_response.cookies['auth_token'].value
 
     client.cookies = SimpleCookie({'auth_token': auth_token})
+
+def simulate_dead_code():
+    always_none = None 
+    if not always_none:
+        # do nothing
+        pass 
+    else:
+        # this 'else' condition will never get executed. 
+        # Intentional - to demo dead code
+        pass
+
