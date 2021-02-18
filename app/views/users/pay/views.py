@@ -72,5 +72,6 @@ def user_pay(request, user_id, pay_id):
         Pay.objects.get(id=pay_id).delete()
         return HttpResponse("Success!")
 
-    return HttpResponse("Pay for user " +
-                        str(user_id) + " for pay with id " + str(pay_id))
+    return render(request, 'users/pay/delete_default.html', 
+                            {'user_id': user_id,
+                            'pay_id': pay_id})
