@@ -1,11 +1,7 @@
 name: "Polaris scan"
 
 on:
-  workflow_call:
-    secrets:
-      polaris_access_token:
-        description: "Access token for Polaris (Synpsys)"
-        required: true   
+  workflow_dispatch:  
 jobs:
   build:
     name: code scan with Polaris
